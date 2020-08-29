@@ -23,9 +23,9 @@ const App = () => {
           fontTitle= {a.find((a,index) => shuffle(a[index]))}
           backTitle={d}
           fgColor="blue" 
-          bgColor="darkblue" 
+          bgColor="orangered" 
       >
-      {d === '\u{1F4A3}' ? <> <h1>Allah u Akbar!</h1> <h1>You Loose!</h1></>: <> <h1>Your are Safe!</h1> <Confetti width="220px" style={{overflow:"hidden"}}></Confetti> </>}
+      {d === '\u{1F4A3}' ? <> <h1>Allah u Akbar!</h1> <h1>You Loose!</h1></>: <> <h1>Your are Safe!</h1> <Confetti width="450px" style={{overflow:"hidden"}}></Confetti> </>}
       </FlipCard>
       </div>
       </div>
