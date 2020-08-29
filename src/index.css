@@ -1,13 +1,69 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.flip__container {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.flip__container h2 {
+  font-family: Roboto;
+  letter-spacing: 4px;
+  text-transform: uppercase; 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+.flip__container .front h2 {
+  font-size: 5rem !important;
+  margin: 0; }
+
+.flip__container .back h2 {
+    font-size: 5rem !important;
+    margin: 0; }
+  
+.card__subtitle {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: .75rem;
+  font-weight: 600;
+  margin-top: 0; }
+
+.flip__container > .front,
+.flip__container > .back {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-size: cover !important;
+  background-position: center !important;
+  padding: 2em;
+  background-color: #313131;
+  border-radius: 5px;
+  text-align: center;
+  transition-duration: .5s;
+  transition-property: transform, opacity; }
+
+.flip__container .front {
+  background-blend-mode: overlay; }
+
+/* rotation */
+.flip__container > .front {
+  transform: rotateY(0deg); }
+
+.flip__container > .back {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transform: rotateY(-180deg); }
+
+.flip__container:hover > .front {
+  transform: rotateY(180deg); }
+
+.flip__container:hover > .back {
+  opacity: 1;
+  transform: rotateY(0deg); }
+
+@media screen and (max-width: 768px) {
+  .flip__container .front h2 {
+    font-size: 5rem !important;
+    ; } }
